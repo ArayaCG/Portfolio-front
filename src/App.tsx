@@ -1,16 +1,12 @@
-import "./App.css";
-import CardList from "./components/CardList";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+import GlobalStyle from "./styles/globalStyles";
 
 function App() {
-    let count: number = 0;
-
     return (
-        <>
-            <h1>Mi primera app</h1>
-            <CardList />
-            <p>Clicks: {count}</p>
-            <button onClick={() => count++}>Contador de clicks</button>
-        </>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+        </ThemeProvider>
     );
 }
 
