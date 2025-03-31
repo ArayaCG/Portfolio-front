@@ -11,7 +11,7 @@ export const StyledTitle = styled.h1<Omit<TitleProps, "text">>`
     font-size: ${({ theme }) => theme.fontSizes.xxlarge};
     text-decoration: none;
     background-color: transparent;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.title};
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: ${({ theme }) => theme.fonts.main};

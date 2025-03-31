@@ -13,13 +13,13 @@ export const StyledButton = styled.button<Omit<ButtonProps, "text">>`
     transition: all 0.3s ease;
     text-decoration: none;
     background-color: transparent;
-    color: ${({ theme }) => theme.colors.primary};
-    border: 2px solid ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.button};
+    border: 2px solid ${({ theme }) => theme.colors.button};
 
     &:hover {
-        background-color: ${({ theme }) => theme.colors.accent};
+        background-color: ${({ theme }) => theme.colors.button};
         color: ${({ theme }) => theme.colors.background};
-        border: 2px solid ${({ theme }) => theme.colors.accent};
+        border: 2px solid ${({ theme }) => theme.colors.button};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

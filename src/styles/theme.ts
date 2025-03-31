@@ -1,10 +1,13 @@
 export const theme = {
     colors: {
         background: "#121810",
-        primary: "#EDEABB",
-        text: "#EDEABB",
-        textSecondary: "#DCF4C4",
+        primary: "#EBFFEE",
+        text: "#EBFFEE",
+        textSecondary: "#EDEA8C",
         accent: "#121810",
+        title: "#EDEA8C",
+        button: "#EDEA8C",
+        icon: "#EBFFEE",
     },
     fonts: {
         main: "'Anonymous Pro', monospace",
