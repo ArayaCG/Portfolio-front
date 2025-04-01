@@ -8,6 +8,7 @@ export const theme = {
         title: "#EDEA8C",
         button: "#EDEA8C",
         icon: "#EBFFEE",
+        lines: "#8CDF98",
     },
     fonts: {
         main: "'Anonymous Pro', monospace",
@@ -30,6 +31,7 @@ export const theme = {
         xxlarge: "32px",
     },
     spacing: {
+        none: "none",
         xs: "4px",
         sm: "8px",
         md: "16px",

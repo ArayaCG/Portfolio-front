@@ -1,0 +1,104 @@
+{
+    "skills": [
+        {
+            "nombre": "React",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "nombreIcono": "FaReact"
+        },
+        {
+            "nombre": "JavaScript",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            "nombreIcono": "DiJavascript"
+        },
+        {
+            "nombre": "TypeScript",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            "nombreIcono": "SiTypescript"
+        },
+        {
+            "nombre": "HTML5",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            "nombreIcono": "FaHtml5"
+        },
+        {
+            "nombre": "CSS3",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            "nombreIcono": "FaCss3Alt"
+        },
+        {
+            "nombre": "Node.js",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            "nombreIcono": "FaNodeJs"
+        },
+        {
+            "nombre": "Git",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            "nombreIcono": "FaGitAlt"
+        },
+        {
+            "nombre": "MongoDB",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            "nombreIcono": "SiMongodb"
+        },
+        {
+            "nombre": "PostgreSQL",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+            "nombreIcono": "SiPostgresql"
+        },
+        {
+            "nombre": "Redux",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+            "nombreIcono": "SiRedux"
+        },
+        {
+            "nombre": "Sass",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+            "nombreIcono": "FaSass"
+        },
+        {
+            "nombre": "Docker",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+            "nombreIcono": "FaDocker"
+        },
+        {
+            "nombre": "Jest",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+            "nombreIcono": "SiJest"
+        },
+        {
+            "nombre": "Webpack",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+            "nombreIcono": "SiWebpack"
+        },
+        {
+            "nombre": "Figma",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+            "nombreIcono": "FaFigma"
+        },
+        {
+            "nombre": "AWS",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+            "nombreIcono": "FaAws"
+        },
+        {
+            "nombre": "GraphQL",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+            "nombreIcono": "SiGraphql"
+        },
+        {
+            "nombre": "Firebase",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+            "nombreIcono": "SiFirebase"
+        },
+        {
+            "nombre": "Tailwind",
+            "imagen": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+            "nombreIcono": "SiTailwindcss"
+        },
+        {
+            "nombre": "Styled Components",
+            "imagen": "https://cdn.simpleicons.org/styledcomponents/DB7093",
+            "nombreIcono": "SiStyledcomponents"
+        }
+    ]
+}

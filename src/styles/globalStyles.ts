@@ -11,9 +11,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.fonts.main};
     margin: 0;
     padding: 0;
-    display: flex;
-    place-items: center;
-    justify-content: center;
     min-width: 320px;
     min-height: 100vh;
     background-color: ${(props) => props.theme.colors.background};
