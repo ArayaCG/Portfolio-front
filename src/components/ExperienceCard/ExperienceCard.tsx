@@ -14,7 +14,7 @@ import {
     Title,
 } from "./ExperienceCard.styles";
 
-const ProjectCard: React.FC<Experience> = ({
+const ProjectCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
     id,
     image_url,
     logo_url,
@@ -24,9 +24,10 @@ const ProjectCard: React.FC<Experience> = ({
     url_deploy,
     type,
     date,
+    isSingleItem = false,
 }) => {
     return (
-        <CardContainer>
+        <CardContainer isSingleItem={isSingleItem}>
             <ProjectImage src={image_url} alt={name + " " + id + " " + type} />
             <Overlay className="overlay" />
             <ContentContainer className="content">

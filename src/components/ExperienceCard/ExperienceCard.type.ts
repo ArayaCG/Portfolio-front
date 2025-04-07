@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export enum Type {
     Project = "project",
     Experience = "experience",
@@ -13,6 +15,7 @@ export interface Experience {
     image_url: string;
     logo_url: string;
     type: Type;
+    isSingleItem?: boolean;
 }
 
 export interface ExperiencesSectionProps {
@@ -22,9 +25,18 @@ export interface ExperiencesSectionProps {
 }
 
 export interface ExperiencesContainerProps {
-    experiences: Experience[];
+    experiences?: Experience[];
     showProjects?: boolean;
     showExperiences?: boolean;
-    projectsTitle?: string;
     experiencesTitle?: string;
+    projectsTitle?: string;
+    children?: ReactNode;
+}
+
+export interface CardContainerProps {
+    isSingleItem?: boolean;
+}
+
+export interface ProjectsGridProps {
+    itemCount?: number;
 }

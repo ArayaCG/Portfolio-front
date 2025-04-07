@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { BoldText, RegularText } from "../../styles/typography";
+import { CardContainerProps } from "./ExperienceCard.type";
 
-export const CardContainer = styled.div`
+
+
+export const CardContainer = styled.div<CardContainerProps>`
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: ${(props) => (props.isSingleItem ? "56.25%" : "75%")}; 
     border-radius: ${({ theme }) => theme.borderRadius.medium};
     overflow: hidden;
     cursor: pointer;
@@ -41,7 +44,7 @@ export const Overlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.95) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 `;
