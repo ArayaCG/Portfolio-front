@@ -2,7 +2,7 @@ import React from "react";
 import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
 import { Experience, ExperiencesContainerProps, Type } from "../../components/ExperienceCard/ExperienceCard.type";
 import Title from "../../components/Title/Title";
-import { ProjectsGrid, SectionContainer, TitleWrapper } from "./ExperienceSection.styles";
+import { ExperienceGrid, SectionContainer, TitleWrapper } from "./ExperienceSection.styles";
 
 export const sampleExperiences: Experience[] = [
     {
@@ -81,7 +81,7 @@ const ExperiencesContainer: React.FC<ExperiencesContainerProps> = ({
                     <TitleWrapper>
                         <Title text={experiencesTitle} />
                     </TitleWrapper>
-                    <ProjectsGrid itemCount={workExperiences.length}>
+                    <ExperienceGrid itemCount={workExperiences.length}>
                         {workExperiences.map((experience) => (
                             <ExperienceCard
                                 key={experience.id}
@@ -97,7 +97,7 @@ const ExperiencesContainer: React.FC<ExperiencesContainerProps> = ({
                                 isSingleItem={workExperiences.length === 1}
                             />
                         ))}
-                    </ProjectsGrid>
+                    </ExperienceGrid>
                 </SectionContainer>
             )}
             {showProjects && projects.length > 0 && (
@@ -105,7 +105,7 @@ const ExperiencesContainer: React.FC<ExperiencesContainerProps> = ({
                     <TitleWrapper>
                         <Title text={projectsTitle} />
                     </TitleWrapper>
-                    <ProjectsGrid itemCount={projects.length}>
+                    <ExperienceGrid itemCount={projects.length}>
                         {projects.map((project) => (
                             <ExperienceCard
                                 key={project.id}
@@ -121,7 +121,7 @@ const ExperiencesContainer: React.FC<ExperiencesContainerProps> = ({
                                 isSingleItem={projects.length === 1}
                             />
                         ))}
-                    </ProjectsGrid>
+                    </ExperienceGrid>
                 </SectionContainer>
             )}
         </>

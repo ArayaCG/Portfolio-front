@@ -28,7 +28,7 @@ export const CardContainer = styled.div<CardContainerProps>`
     }
 `;
 
-export const ProjectImage = styled.img`
+export const ExperienceImage = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +61,7 @@ export const ContentContainer = styled.div`
     z-index: 2;
 `;
 
-export const ProjectLogo = styled.img`
+export const ExperienceLogo = styled.img`
     height: 40px;
     width: auto;
     margin-bottom: ${({ theme }) => theme.spacing.sm};
@@ -83,7 +83,7 @@ export const StackTag = styled.span`
     border: 1px solid ${({ theme }) => theme.colors.lines};
 `;
 
-export const ProjectLink = styled.a`
+export const ExperienceLink = styled.a`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.colors.button};

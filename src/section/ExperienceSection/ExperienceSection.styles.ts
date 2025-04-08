@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { ProjectsGridProps } from "../../components/ExperienceCard/ExperienceCard.type";
+import { ExperienceGridProps } from "../../components/ExperienceCard/ExperienceCard.type";
 
 export const SectionContainer = styled.section`
     padding: ${({ theme }) => theme.spacing.xxl} 0;
     width: 100%;
 `;
 
-export const ProjectsGrid = styled.div<ProjectsGridProps>`
+export const ExperienceGrid = styled.div<ExperienceGridProps>`
     display: grid;
     gap: ${({ theme }) => theme.spacing.xl};
 

@@ -6,15 +6,15 @@ import {
     ContentContainer,
     Description,
     Overlay,
-    ProjectImage,
-    ProjectLink,
-    ProjectLogo,
+    ExperienceImage,
+    ExperienceLink,
+    ExperienceLogo,
     StackContainer,
     StackTag,
     Title,
 } from "./ExperienceCard.styles";
 
-const ProjectCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
+const ExperienceCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
     id,
     image_url,
     logo_url,
@@ -28,10 +28,10 @@ const ProjectCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
 }) => {
     return (
         <CardContainer isSingleItem={isSingleItem}>
-            <ProjectImage src={image_url} alt={name + " " + id + " " + type} />
+            <ExperienceImage src={image_url} alt={name + " " + id + " " + type} />
             <Overlay className="overlay" />
             <ContentContainer className="content">
-                <ProjectLogo src={logo_url} alt={`${name} logo ${date}`} />
+                <ExperienceLogo src={logo_url} alt={`${name} logo ${date}`} />
                 <Title>{name}</Title>
                 <Description>{description}</Description>
                 <StackContainer>
@@ -39,12 +39,12 @@ const ProjectCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
                         <StackTag key={index}>{tech}</StackTag>
                     ))}
                 </StackContainer>
-                <ProjectLink href={url_deploy} target="_blank" rel="noopener noreferrer">
+                <ExperienceLink href={url_deploy} target="_blank" rel="noopener noreferrer">
                     Ver proyecto <FiExternalLink />
-                </ProjectLink>
+                </ExperienceLink>
             </ContentContainer>
         </CardContainer>
     );
 };
 
-export default ProjectCard;
+export default ExperienceCard;

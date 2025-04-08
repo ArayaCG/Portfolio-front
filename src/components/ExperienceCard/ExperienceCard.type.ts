@@ -37,6 +37,6 @@ export interface CardContainerProps {
     isSingleItem?: boolean;
 }
 
-export interface ProjectsGridProps {
+export interface ExperienceGridProps {
     itemCount?: number;
 }
