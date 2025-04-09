@@ -6,7 +6,7 @@ export const StyledTitle = styled.h1<Omit<TitleProps, "text">>`
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
+    padding: 20px 48px;
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     font-size: ${({ theme }) => theme.fontSizes.xxlarge};
     text-decoration: none;
