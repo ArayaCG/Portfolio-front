@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react";
 import { useState } from "react";
 import type { ContactFormProps, FormData } from "./ContactMe.type";
@@ -28,7 +30,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             [name]: value,
         }));
 
-        // Limpiar error cuando el usuario comienza a escribir
         if (errors[name as keyof FormData]) {
             setErrors((prev) => ({
                 ...prev,

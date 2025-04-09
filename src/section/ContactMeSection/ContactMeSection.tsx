@@ -6,6 +6,7 @@ import ContactForm from "../../components/ContactMe/ContactMe";
 import { TitleWrapper } from "../SkillSection/SkillSection.style";
 import Title from "../../components/Title/Title";
 import { FormData } from "../../components/ContactMe/ContactMe.type";
+import { PageContainer } from "./ContactMeSection.styles";
 
 const ContactMeSection: React.FC = () => {
     const handleSubmit = (data: FormData) => {
@@ -19,9 +20,9 @@ const ContactMeSection: React.FC = () => {
                 <Title text="Contactame" />
             </TitleWrapper>
             <GlobalStyle />
-            <div style={{ backgroundColor: "#121810", minHeight: "100vh", padding: "20px" }}>
+            <PageContainer>
                 <ContactForm onSubmit={handleSubmit} />
-            </div>
+            </PageContainer>
         </ThemeProvider>
     );
 };
