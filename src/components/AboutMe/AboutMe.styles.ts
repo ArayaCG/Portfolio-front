@@ -4,7 +4,7 @@ export const ProfileContainer = styled.section`
     display: flex;
     width: 100%;
     min-height: 400px;
-    background-color: ${({ theme }) => theme.colors.background};
+    background-color: transparent;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         flex-direction: column;

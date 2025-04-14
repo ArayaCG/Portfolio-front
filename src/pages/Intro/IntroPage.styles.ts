@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components"
 
 const fadeIn = keyframes`
   from {
@@ -7,7 +7,7 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
   }
-`;
+`
 
 export const IntroContainer = styled.div`
     width: 100%;
@@ -16,7 +16,6 @@ export const IntroContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    background: linear-gradient(135deg, #18300e 0%, #050f08 100%);
     position: relative;
     overflow: hidden;
     padding: 0 15%;
@@ -25,18 +24,7 @@ export const IntroContainer = styled.div`
         padding: 0 10%;
         align-items: center;
     }
-`;
-
-export const BackgroundPattern = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(rgba(140, 223, 152, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-    z-index: 1;
-`;
+`
 
 export const ContentWrapper = styled.div`
     display: flex;
@@ -49,7 +37,7 @@ export const ContentWrapper = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         align-items: center;
     }
-`;
+`
 
 export const Name = styled.h1`
     font-size: 5rem;
@@ -72,7 +60,7 @@ export const Name = styled.h1`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 2.5rem;
     }
-`;
+`
 
 export const Role = styled.h2`
     font-size: 1.8rem;
@@ -90,7 +78,7 @@ export const Role = styled.h2`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 1.2rem;
     }
-`;
+`
 
 export const EnterButton = styled.button`
     background-color: transparent;
@@ -107,4 +95,4 @@ export const EnterButton = styled.button`
         background-color: rgba(237, 234, 140, 0.1);
         transform: translateY(-3px);
     }
-`;
+`

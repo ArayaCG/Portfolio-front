@@ -3,6 +3,7 @@ import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
 import { Experience, ExperiencesContainerProps, Type } from "../../components/ExperienceCard/ExperienceCard.type";
 import Title from "../../components/Title/Title";
 import { ExperienceGrid, SectionContainer, TitleWrapper } from "./ExperienceSection.styles";
+import SectionDivider from "../../components/SectionDivider/SectionDivider";
 
 export const sampleExperiences: Experience[] = [
     {
@@ -100,6 +101,7 @@ const ExperiencesContainer: React.FC<ExperiencesContainerProps> = ({
                     </ExperienceGrid>
                 </SectionContainer>
             )}
+            <SectionDivider />
             {showProjects && projects.length > 0 && (
                 <SectionContainer>
                     <TitleWrapper>

@@ -9,6 +9,7 @@ export const theme = {
         button: "#EDEA8C",
         icon: "#EBFFEE",
         lines: "#8CDF98",
+        section: "#92B993",
     },
     fonts: {
         main: "'Anonymous Pro', monospace",

@@ -14,7 +14,7 @@ export const CarouselContainer = styled.div`
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    background-color: ${({ theme }) => theme.colors.background};
+    background-color: transparent;
     padding: ${({ theme }) => theme.spacing.xl} 0;
 `;
 
