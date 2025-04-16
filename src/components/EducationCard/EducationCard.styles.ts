@@ -40,14 +40,3 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     justify-content: center;
 `;
-
-export const LinkText = styled(RegularText)`
-    color: ${({ theme }) => theme.colors.textSecondary};
-    margin-top: ${({ theme }) => theme.spacing.xs};
-    text-decoration: underline;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.8;
-    }
-`;

@@ -1,5 +1,5 @@
 import { BoldText, RegularText } from "../../styles/typography";
-import { CardContainer, ContentContainer, LinkText, Logo, LogoContainer, YearText } from "./EducationCard.styles";
+import { CardContainer, ContentContainer, Logo, LogoContainer, YearText } from "./EducationCard.styles";
 import { Education } from "./EducationCard.type";
 
 const EducationCard: React.FC<Education> = ({ name, description, year, image_url }) => {
@@ -12,7 +12,6 @@ const EducationCard: React.FC<Education> = ({ name, description, year, image_url
                 <BoldText>{name}</BoldText>
                 <RegularText>{description}</RegularText>
                 <YearText>{year}</YearText>
-                <LinkText>LINK (certificado)</LinkText>
             </ContentContainer>
         </CardContainer>
     );
