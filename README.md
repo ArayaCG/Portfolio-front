@@ -1,58 +1,78 @@
-<<<<<<< HEAD
-# Portfolio-front
-=======
-# React + TypeScript + Vite
+# 🌿 Portfolio - ArayaCG
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el código fuente de mi portfolio personal, desarrollado con **React**, **TypeScript** y **Vite**, utilizando una estética minimalista y animaciones suaves gracias a **Framer Motion**.
 
-Currently, two official plugins are available:
+> 💡 Proyecto creado como demo profesional y presentación personal para entrevistas y redes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+-   ⚛️ **React 19**
+-   🟦 **TypeScript**
+-   ⚡ **Vite 6**
+-   🎨 **styled-components**
+-   🧩 **React Icons**
+-   🎞️ **Framer Motion**
+-   🌐 **Axios**
+-   🧹 **ESLint** con reglas personalizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalación
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Cloná el repo y corré los siguientes comandos:
+
+```bash
+# Instalación de dependencias
+npm install
+
+# Levantar entorno de desarrollo
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Scripts disponibles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev       # Levanta el entorno de desarrollo con Vite
+npm run build     # Compila el proyecto para producción
+npm run preview   # Previsualiza el build
+npm run lint      # Lint del código con ESLint
 ```
->>>>>>> 0c6423f (Creando el repositorio)
+
+## 🎯 Objetivo
+
+Construir una interfaz simple, accesible y visualmente atractiva que sirva como carta de presentación y demuestre mis habilidades como desarrollador frontend.
+
+## 🥌 Variables de entorno:
+
+Para configurar las variables de entorno necesarias, crea un archivo `.env` en la raíz del proyecto basado en el archivo `.env.example` proporcionado. Asegúrate de definir las siguientes variables:
+
+```bash
+# Base URL de la API
+VITE_API_BASE_URL= tu_backend_url
+
+# URL del CV (enlace al archivo PDF, por ejemplo)
+VITE_CV_URL= tu_cv_url
+```
+
+Recuerda reemplazar `tu_backend_url` y `tu_cv_url` con las URLs adecuadas. Estos valores son necesarios para que la aplicación funcione correctamente en entornos locales y de producción.
+
+## 📨 Contacto
+
+Si te gustó el portfolio o querés conectar, podés escribirme en LinkedIn o por mail a
+arayag64@gmail.com
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+
+1. Haz un fork del proyecto
+2. Crea tu rama de características (`git checkout -b feature/nueva-caracteristica`)
+3. Confirma tus cambios (`git commit -m 'Añadir nueva característica'`)
+4. Sube tu rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia ISC.
+
+## 🛠️ Mantenimiento
+
+Para cualquier problema o sugerencia, por favor abre un issue en el repositorio de GitHub.
