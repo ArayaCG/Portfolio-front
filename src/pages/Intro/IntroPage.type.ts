@@ -3,3 +3,8 @@ export interface IntroScreenProps {
     role: string;
     onEnter?: () => void;
 }
+
+export interface IntroScreenState {
+    name: string;
+    rol: string;
+}

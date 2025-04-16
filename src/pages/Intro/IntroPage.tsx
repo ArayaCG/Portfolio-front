@@ -1,13 +1,31 @@
-import type React from "react";
-import type { IntroScreenProps } from "./IntroPage.type";
+import React, { useState, useEffect } from "react";
+import type { IntroScreenProps, IntroScreenState } from "./IntroPage.type";
 import { IntroContainer, ContentWrapper, Name, Role, EnterButton } from "./IntroPage.styles";
 import EnhancedBackground from "../../components/Background/Background";
+import { logVisit } from "../../services/visitService";
+import { getAboutMe } from "../../services/aboutMeService";
 
-const IntroScreen: React.FC<IntroScreenProps> = ({ name, role, onEnter }) => {
-    const handleEnter = () => {
-        if (onEnter) {
-            onEnter();
-        }
+const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter }) => {
+    const [aboutMeData, setAboutMeData] = useState<IntroScreenState>({ name: "", rol: "" });
+    const { name, rol } = aboutMeData;
+
+    useEffect(() => {
+        const fetchAboutMe = async () => {
+            try {
+                const data = await getAboutMe();
+                setAboutMeData({ name: data.name, rol: data.rol });
+            } catch (error) {
+                console.error("Error al obtener los datos de AboutMe:", error);
+                setAboutMeData({ name: "Invitado", rol: "Desarrollador" });
+            }
+        };
+
+        fetchAboutMe();
+    }, []);
+
+    const handleEnter = async () => {
+        await logVisit();
+        onEnter?.();
     };
 
     return (
@@ -15,7 +33,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ name, role, onEnter }) => {
             <IntroContainer>
                 <ContentWrapper>
                     <Name>{name}</Name>
-                    <Role>{role}</Role>
+                    <Role>{rol}</Role>
                     <EnterButton onClick={handleEnter}>Ver Más</EnterButton>
                 </ContentWrapper>
             </IntroContainer>

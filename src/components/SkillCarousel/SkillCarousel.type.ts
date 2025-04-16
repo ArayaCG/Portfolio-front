@@ -1,7 +1,7 @@
 import type { Skill } from "../SkillCard/SkillCard.type";
 
 export interface SkillsCarouselProps {
-    fetchSkills: () => Promise<Skill[]>;
+    skills: Skill[];
 }
 
 export interface SkillsViewProps {

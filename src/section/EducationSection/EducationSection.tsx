@@ -3,44 +3,18 @@ import Title from "../../components/Title/Title";
 import { SectionContainer } from "../ExperienceSection/ExperienceSection.styles";
 import { TitleWrapper } from "../SkillSection/SkillSection.style";
 import { CardsGrid } from "./EducationSection.styles";
-import { EducationSectionProps } from "./EducationSection.type";
+import { useEducations } from "../../hooks/useEducations";
 
-export const EducationData = [
-    {
-      id: 1,
-      name: "Full Stack Web Developer",
-      description: "Henry Bootcamp",
-      year: "2024",
-      image_url: "/public/SharpPixAI 1.png",
-    },
-    {
-      id: 2,
-      name: "Full Stack Web Developer",
-      description: "Henry Bootcamp",
-      year: "2024",
-      image_url: "/public/SharpPixAI 1.png",
-    },
-    {
-      id: 3,
-      name: "Full Stack Web Developer",
-      description: "Henry Bootcamp",
-      year: "2024",
-      image_url: "/public/SharpPixAI 1.png",
-    },
-    {
-      id: 4,
-      name: "Full Stack Web Developer",
-      description: "Henry Bootcamp",
-      year: "2024",
-      image_url: "/public/SharpPixAI 1.png",
-    },
-  ]
+const EducationSection: React.FC = () => {
+    const { educations, loading, error } = useEducations();
 
-const EducationSection: React.FC<EducationSectionProps> = ({ title = "Educación", educations }) => {
+    if (loading) return <p>Cargando educación...</p>;
+    if (error) return <p>Error al cargar educación 😢</p>;
+
     return (
         <SectionContainer>
             <TitleWrapper>
-                <Title text={title} />
+                <Title text="Educación" />
             </TitleWrapper>
             <CardsGrid>
                 {educations.map((education) => (

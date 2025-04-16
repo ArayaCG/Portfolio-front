@@ -29,7 +29,7 @@ export const ImageContainer = styled.div`
 export const ProfileImage = styled.img`
     width: 70%;
     height: 80%;
-    object-fit: cover;
+    object-fit: auto;
 `;
 
 export const ContentContainer = styled.div`

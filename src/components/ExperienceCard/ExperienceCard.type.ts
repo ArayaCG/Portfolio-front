@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
 
 export enum Type {
-    Project = "project",
-    Experience = "experience",
+    PROJECT = "project",
+    WORK = "work",
 }
 
 export interface Experience {
     id: number;
     name: string;
     description: string;
-    technologies: string[];
+    technologies: string;
     date: string;
     url_deploy: string;
     image_url: string;

@@ -1,16 +1,22 @@
-import type React from "react";
+import React from "react";
 import Title from "../../components/Title/Title";
 import SkillsCarousel from "../../components/SkillCarousel/SkillCarousel";
 import { SkillsSection, TitleWrapper } from "./SkillSection.style";
-import { SkillsViewProps } from "../../components/SkillCarousel/SkillCarousel.type";
+import { useSkills } from "../../hooks/useSkill";
 
-export const SkillsView: React.FC<SkillsViewProps> = ({ title = "Habilidades", fetchSkills }) => {
+const SkillsView: React.FC = () => {
+    const { skills, loading, error } = useSkills();
+    
+
     return (
         <SkillsSection>
             <TitleWrapper>
-                <Title text={title} />
+                <Title text="Habilidades" />
             </TitleWrapper>
-            <SkillsCarousel fetchSkills={fetchSkills} />
+
+            {loading && <p>Cargando habilidades...</p>}
+            {error && <p>Error al cargar habilidades: {error.message}</p>}
+            {!loading && !error && <SkillsCarousel skills={skills} />}
         </SkillsSection>
     );
 };

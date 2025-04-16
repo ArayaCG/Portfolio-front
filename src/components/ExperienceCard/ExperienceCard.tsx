@@ -26,17 +26,18 @@ const ExperienceCard: React.FC<Experience & { isSingleItem?: boolean }> = ({
     date,
     isSingleItem = false,
 }) => {
+    const techArray = typeof technologies === "string" ? technologies.split(",").map((tech) => tech.trim()) : [];
     return (
         <CardContainer isSingleItem={isSingleItem}>
-            <ExperienceImage src={image_url} alt={name + " " + id + " " + type} />
+            <ExperienceImage src={logo_url} alt={`Imagen del proyecto ${name} (${id} - ${type})`} />
             <Overlay className="overlay" />
             <ContentContainer className="content">
-                <ExperienceLogo src={logo_url} alt={`${name} logo ${date}`} />
+                <ExperienceLogo src={image_url} alt={`Logo de ${name} (${date})`} />
                 <Title>{name}</Title>
                 <Description>{description}</Description>
                 <StackContainer>
-                    {technologies.map((tech, index) => (
-                        <StackTag key={index}>{tech}</StackTag>
+                    {techArray.map((tech, index) => (
+                        <StackTag key={`${tech}-${index}`}>{tech}</StackTag>
                     ))}
                 </StackContainer>
                 <ExperienceLink href={url_deploy} target="_blank" rel="noopener noreferrer">

@@ -1,5 +1,4 @@
-import type React from "react";
-import { useEffect, useState } from "react";
+import React from "react";
 import SkillCard from "../SkillCard/SkillCard";
 import type { SkillsCarouselProps } from "./SkillCarousel.type";
 import {
@@ -9,31 +8,13 @@ import {
     CarouselInner,
     CarouselWrapper,
 } from "./SkillCarousel.styles";
-import { Skill } from "../SkillCard/SkillCard.type";
 
-const SkillsCarousel: React.FC<SkillsCarouselProps> = ({ fetchSkills }) => {
-    const [firstHalf, setFirstHalf] = useState<Skill[]>([]);
-    const [secondHalf, setSecondHalf] = useState<Skill[]>([]);
+const SkillsCarousel: React.FC<SkillsCarouselProps> = ({ skills }) => {
+    const midpoint = Math.ceil(skills.length / 2);
+    const firstHalf = skills.slice(0, midpoint);
+    const secondHalf = skills.slice(midpoint);
 
-    useEffect(() => {
-        const loadSkills = async () => {
-            try {
-                const data = await fetchSkills();
-
-                const midpoint = Math.ceil(data.length / 2);
-                setFirstHalf(data.slice(0, midpoint));
-                setSecondHalf(data.slice(midpoint));
-            } catch (error) {
-                console.error("Error cargando habilidades:", error);
-            }
-        };
-
-        loadSkills();
-    }, [fetchSkills]);
-
-    const createInfiniteGroup = (skills: Skill[]) => {
-        return [...skills, ...skills, ...skills];
-    };
+    const createInfiniteGroup = (skillsSubset: typeof skills) => [...skillsSubset, ...skillsSubset, ...skillsSubset];
 
     return (
         <CarouselContainer>
@@ -42,7 +23,7 @@ const SkillsCarousel: React.FC<SkillsCarouselProps> = ({ fetchSkills }) => {
                     <CarouselWrapper>
                         <CarouselTrack direction="left">
                             {createInfiniteGroup(firstHalf).map((skill, index) => (
-                                <SkillCard key={`${skill.nombre}-${index}`} skill={skill} />
+                                <SkillCard key={`${skill.name}-${index}`} skill={skill} />
                             ))}
                         </CarouselTrack>
                     </CarouselWrapper>
@@ -52,7 +33,7 @@ const SkillsCarousel: React.FC<SkillsCarouselProps> = ({ fetchSkills }) => {
                     <CarouselWrapper>
                         <CarouselTrack direction="right">
                             {createInfiniteGroup(secondHalf).map((skill, index) => (
-                                <SkillCard key={`${skill.nombre}-${index}`} skill={skill} />
+                                <SkillCard key={`${skill.name}-${index}`} skill={skill} />
                             ))}
                         </CarouselTrack>
                     </CarouselWrapper>

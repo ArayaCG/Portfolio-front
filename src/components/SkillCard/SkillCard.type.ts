@@ -1,7 +1,7 @@
 export interface Skill {
-    nombre: string;
-    imagen: string;
-    nombreIcono: string;
+    name: string;
+    image: string;
+    description: string;
 }
 
 export interface SkillCardProps {
