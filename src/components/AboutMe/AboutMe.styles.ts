@@ -28,8 +28,19 @@ export const ImageContainer = styled.div`
 
 export const ProfileImage = styled.img`
     width: 70%;
-    height: 80%;
-    object-fit: auto;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        border-radius: 50%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        width: 60%;
+        border-radius: 50%;
+    }
 `;
 
 export const ContentContainer = styled.div`
