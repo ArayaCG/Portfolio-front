@@ -9,5 +9,5 @@ export interface SkillCardProps {
 }
 
 export interface CardInnerProps {
-    isFlipped: boolean;
+  $isFlipped?: boolean; 
 }

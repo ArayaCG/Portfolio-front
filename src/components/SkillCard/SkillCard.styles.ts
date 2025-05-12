@@ -39,6 +39,26 @@ export const CardContainer = styled.div`
         height: 80px;
         margin: 0 ${({ theme }) => theme.spacing.xs};
     }
+
+    /* Ocultar en móviles */
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const MobileContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; /* Aumentado para acomodar nombres más largos */
+    margin: 0 ${({ theme }) => theme.spacing.sm};
+    flex-shrink: 0;
+
+    /* Solo mostrar en móviles */
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+    }
 `;
 
 export const CardInner = styled.div<CardInnerProps>`
@@ -47,7 +67,7 @@ export const CardInner = styled.div<CardInnerProps>`
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    animation: ${(props) => (props.isFlipped ? flipAnimation : flipBackAnimation)} 0.6s forwards;
+    animation: ${(props) => (props.$isFlipped ? flipAnimation : flipBackAnimation)} 0.6s forwards;
 `;
 
 export const CardFace = styled.div`
@@ -122,4 +142,40 @@ export const ImageWrapper = styled.div`
         width: 40px;
         height: 40px;
     }
+`;
+
+export const MobileIconWrapper = styled.div`
+    width: 70px; /* Aumentado el tamaño */
+    height: 70px; /* Aumentado el tamaño */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 24, 16, 0.7);
+    border-radius: ${({ theme }) => theme.borderRadius.medium};
+    border: 2px solid ${({ theme }) => theme.colors.lines};
+    padding: ${({ theme }) => theme.spacing.xs};
+    margin-bottom: ${({ theme }) => theme.spacing.sm};
+
+    svg {
+        width: 80%;
+        height: 80%;
+        color: ${({ theme }) => theme.colors.icon};
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        width: 60px; /* Aún más grande en móviles muy pequeños */
+        height: 60px;
+    }
+`;
+
+export const MobileSkillName = styled.p`
+    font-family: ${({ theme }) => theme.fonts.main};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
+    color: ${({ theme }) => theme.colors.text};
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word; /* Permite que el texto se rompa en múltiples líneas */
+    hyphens: auto; /* Ayuda con la separación de palabras largas */
+    line-height: 1.2;
 `;

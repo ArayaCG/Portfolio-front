@@ -26,7 +26,7 @@ export const FormGroup = styled.div`
 export const StyledInput = styled.input<InputProps>`
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid ${({ theme, hasError }) => (hasError ? "red" : theme.colors.lines)};
+    border-bottom: 1px solid ${({ theme, $hasError }) => ($hasError ? "red" : theme.colors.lines)};
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fonts.main};
     font-size: ${({ theme }) => theme.fontSizes.medium};

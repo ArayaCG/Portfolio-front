@@ -9,5 +9,5 @@ export interface ContactFormProps {
 }
 
 export interface InputProps {
-    hasError?: boolean;
+    $hasError?: boolean;
 }

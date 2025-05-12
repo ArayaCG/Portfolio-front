@@ -15,7 +15,7 @@ export interface Experience {
     image_url: string;
     logo_url: string;
     type: Type;
-    isSingleItem?: boolean;
+    $isSingleItem?: boolean;
 }
 
 export interface ExperiencesSectionProps {
@@ -34,9 +34,9 @@ export interface ExperiencesContainerProps {
 }
 
 export interface CardContainerProps {
-    isSingleItem?: boolean;
+    $isSingleItem?: boolean;
 }
 
 export interface ExperienceGridProps {
-    itemCount?: number;
+    $itemCount?: number;
 }

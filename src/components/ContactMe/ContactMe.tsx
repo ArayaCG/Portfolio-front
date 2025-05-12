@@ -25,7 +25,7 @@ const ContactForm: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Nombre"
-                        hasError={!!errors.name}
+                        $hasError={!!errors.name}
                     />
                     {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
                 </FormGroup>
@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
-                        hasError={!!errors.email}
+                        $hasError={!!errors.email}
                     />
                     {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
                 </FormGroup>
@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
                         onChange={handleChange}
                         placeholder="Mensaje"
                         rows={6}
-                        hasError={!!errors.message}
+                        $hasError={!!errors.message}
                     />
                     {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
                 </FormGroup>

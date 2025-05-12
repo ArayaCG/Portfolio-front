@@ -22,12 +22,12 @@ const ExperiencesContainer: React.FC = () => {
                     <TitleWrapper>
                         <Title text="Experiencia Laboral" />
                     </TitleWrapper>
-                    <ExperienceGrid itemCount={workExperiences.length}>
+                    <ExperienceGrid $itemCount={workExperiences.length}>
                         {workExperiences.map((experience) => (
                             <ExperienceCard
                                 key={experience.id}
                                 {...experience}
-                                isSingleItem={workExperiences.length === 1}
+                                $isSingleItem={workExperiences.length === 1}
                             />
                         ))}
                     </ExperienceGrid>
@@ -39,9 +39,9 @@ const ExperiencesContainer: React.FC = () => {
                     <TitleWrapper>
                         <Title text="Proyectos" />
                     </TitleWrapper>
-                    <ExperienceGrid itemCount={projects.length}>
+                    <ExperienceGrid $itemCount={projects.length}>
                         {projects.map((project) => (
-                            <ExperienceCard key={project.id} {...project} isSingleItem={projects.length === 1} />
+                            <ExperienceCard key={project.id} {...project} $isSingleItem={projects.length === 1} />
                         ))}
                     </ExperienceGrid>
                 </SectionContainer>
