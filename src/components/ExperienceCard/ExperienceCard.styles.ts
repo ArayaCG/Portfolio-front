@@ -43,7 +43,9 @@ export const ImageWrapper = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         width: 100%;
-        padding-bottom: 75%; /* Mantiene la proporción */
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -121,10 +123,13 @@ export const HeaderContainer = styled.div`
 export const ExperienceLogo = styled.img`
     height: 40px;
     width: auto;
+    max-width: 120px;
+    object-fit: contain;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         margin-right: ${({ theme }) => theme.spacing.sm};
         margin-bottom: 0;
+        height: 30px;
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
