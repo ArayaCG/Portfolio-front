@@ -27,11 +27,11 @@ const LandingPage: React.FC = () => {
                     <SectionDivider />
                 </LandingPageContainerPadding>
                 <LandingPageContainer>
-                    <SkillSection/>
+                    <SkillSection />
                     <SectionDivider />
                 </LandingPageContainer>
                 <LandingPageContainerPadding>
-                    <ProjectsSection/>
+                    <ProjectsSection />
                     <SectionDivider />
                     <EducationSection />
                     <SectionDivider />
@@ -42,8 +42,8 @@ const LandingPage: React.FC = () => {
                 <Footer
                     name="Cristian Gabriel Araya Salattino"
                     socialLinks={{
-                        github: "https://github.com/username",
-                        linkedin: "https://linkedin.com/in/username",
+                        github: "https://github.com/ArayaCG",
+                        linkedin: "https://www.linkedin.com/in/cristian-gabriel-araya-salattino/",
                     }}
                 />
             </EnhancedBackground>
